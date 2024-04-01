@@ -1,0 +1,79 @@
+@use '../../style' as s;
+
+main {
+  color: s.color(light);
+  padding: s.space(4);
+  min-width: 560px;
+}
+
+.nav {
+  display: flex;
+  background-color: #35363a;
+  height: 60px;
+  border-radius: 30px;
+  align-items: center;
+  padding: 0 15px;
+  margin-bottom: 30px;
+
+  a {
+    cursor: pointer;
+  }
+
+  img {
+    height: 30px;
+    width: 30px;
+    margin: 4px 10px 0px 10px;
+  }
+
+  input {
+    color: aliceblue;
+    background-color: black;
+    height: 30px;
+    border-radius: 15px;
+    border: 0;
+    padding: 0 15px;
+    font-size: 20px;
+    flex: 1;
+  }
+
+  // ========== input plus ================
+
+  input:focus {
+    border-color: rgba(
+      0,
+      0,
+      222,
+      0.758
+    ) !important; /* Цвет рамки при активации поля ввода */
+    outline: none; /* Убрать стандартный контур фокуса */
+  }
+  // ======================================
+}
+
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 99;
+  font-size: 22px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  background-color: #761ef294;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  opacity: 0.8;
+  transition: opacity 0.3s, background-color 0.5s;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #0056b3;
+}
+
+#scrollToTopBtn.show {
+  opacity: 1;
+}

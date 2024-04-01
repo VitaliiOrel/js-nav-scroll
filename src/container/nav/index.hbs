@@ -1,0 +1,37 @@
+{{!
+Це код container файлу для index сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+}}
+
+<main>
+    <div class="nav">
+        <a onclick="back()"><img src="/svg/left.svg"></a>
+        <a onclick="forward()"><img src="/svg/right.svg"></a>
+        <a onclick="reload()"><img src="/svg/new.svg"></a>
+        <a onclick="home()"><img src="/svg/home.svg"></a>
+        <input type="text" placeholder="http://" id="urlInput">
+        <a onclick="go()"><img src="/svg/go.svg"></a>
+    </div>
+
+
+    <div id="lorem">
+        It is a long established fact that a reader will be distracted by the readable content
+        of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+        more-or-less normal distribution of letters, as opposed to using 'Content here, content
+        here', making it look like readable English. Many desktop publishing packages and web page
+        editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'
+        will uncover many web sites still in their infancy. Various versions have evolved over the
+        years, sometimes by accident, sometimes on purpose (injected humour and the like).
+    </div>
+
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Наверх">&#8593;</button>
+
+
+</main>
+
+{{!
+Цей код містить лише те, що буде виводитись в
+
+<body>
+    Адже наш layout/default.hbs має вже структуру HTML
+    }}
